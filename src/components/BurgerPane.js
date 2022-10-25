@@ -4,14 +4,14 @@ import React from 'react'
 // since burger pane needs to display ingredient components, we'll import those as well
 import Ingredient from './Ingredient'
 
- const BurgerPane = (props) => {
-    console.log(props.ingredients, 'burgerpane')
-    let burgerBits = props.ingredients.map((ing, i) => (
+ const BurgerPane = ({ingredients, remove, clear}) => {
+    console.log(ingredients, 'burgerpane')
+    let burgerBits = ingredients.map((ing, i) => (
         <li key={i}>
             <Ingredient
                 itemKey={i}
                 ingredient={ing}
-                clickFunc={props.remove}
+                clickFunc={remove}
             />
         </li>
         ))
@@ -22,7 +22,7 @@ import Ingredient from './Ingredient'
             <ul>
                 { burgerBits }
             </ul>
-            <button onClick={props.clear}>Clear Burger</button>
+            <button onClick={clear}>Clear Burger</button>
         </section>
     )
     

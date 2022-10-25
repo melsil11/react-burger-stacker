@@ -2,23 +2,19 @@
 import React from 'react'
 import Ingredient from './Ingredient'
 
- const IngredientList = (props) => {
+ const IngredientList = ({ingredients, add}) => {
     
-    let allIngredients = () => {
-        
-        props.ingredients.map((ing, i) => {
-            return(
-        <li key={i}>{ing.name}
+    let allIngredients = ingredients.map((ing, i) => ( 
+      
+       <li key={i}>{ing.name}
             <Ingredient
                 itemKey={i}
                 ingredient={ing}
-                clickFunc={props.add}
+                clickFunc={add}
             />
         </li>
-            )
-        })
-        
-    }
+        ))          
+    
     
     // const allIngredients = 
     // props.ingredients.map((ing, i) =>{
