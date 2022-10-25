@@ -5,7 +5,7 @@ import React from 'react'
 import Ingredient from './Ingredient'
 
  const BurgerPane = ({ingredients, remove, clear}) => {
-    console.log(ingredients, 'burgerpane')
+    // console.log(ingredients, 'burgerpane')
     let burgerBits = ingredients.map((ing, i) => (
         <li key={i}>
             <Ingredient

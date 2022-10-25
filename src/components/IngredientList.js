@@ -6,7 +6,7 @@ import Ingredient from './Ingredient'
     
     let allIngredients = ingredients.map((ing, i) => ( 
       
-       <li key={i}>{ing.name}
+       <li key={i}>
             <Ingredient
                 itemKey={i}
                 ingredient={ing}
